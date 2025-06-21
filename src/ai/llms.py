@@ -1,7 +1,7 @@
 from langchain_openai import ChatOpenAI
 from django.conf import settings
 
-
+## hello
 def get_openai_api_key():
     return settings.OPEN_API_KEY
 
