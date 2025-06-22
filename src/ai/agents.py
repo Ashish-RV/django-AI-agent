@@ -1,19 +1,15 @@
 from langgraph.prebuilt import create_react_agent
-<<<<<<< HEAD
+
 from ai.llms import get_openai_model
 from ai.tools import (document_tools)
 
-def get_document_agent():
-=======
-from llms import get_openai_model
-from tools import (document_tools)
 
-def get_agent():
->>>>>>> 43d4f3875b3c6d4d1e1f8e62f4615ea1bc370af2
-    model = get_openai_model()
+def get_document_agent(model=None, checkpointer =None):
+    llm_model = get_openai_model(model=model)
     agent = create_react_agent(
-        model=model,
+        model=llm_model,
         tools=document_tools,
-        prompt="You are a helpful assistant"
+        prompt="You are a helpful assistant",
+        checkpointer=checkpointer
     )
     return agent
