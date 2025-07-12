@@ -124,3 +124,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 OPEN_API_KEY = config("OPEN_API_KEY", default = None)
+TMDB_API_KEY = config("TMDB_API_KEY", default = None)

@@ -7,9 +7,9 @@ from langchain_core.language_models.llms import LLM
 def get_openai_api_key():
     return settings.OPEN_API_KEY
 
-def get_openai_model(model="openai-community_-_gpt2-xl"):
-    if model is None:
-        model = "gpt-4o-mini"
+def get_openai_model(model="llama-3.2-1b-instruct"):
+    # if model is None:
+    #     model = "gpt-4o-mini"
     # elif model=="openai-community_-_gpt2-xl":
     #     return OpenAI(
     #             openai_api_key="not-needed",
@@ -25,3 +25,4 @@ def get_openai_model(model="openai-community_-_gpt2-xl"):
             max_retries=2,
             api_key= get_openai_api_key(),
     )
+    
